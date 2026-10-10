@@ -8,3 +8,10 @@
 - Bench: `./scripts/snapdragon/run.py --target adb --devices HTP0 -- llama-bench -p 512 -n 64 -m /data/local/tmp/gguf/Qwen3-4B-Instruct-2507-Q4_0.gguf`
 - Results (Qwen3-4B Q4_0): NPU pp512 640.6 t/s, tg64 18.1 t/s; GPU pp512 119.5 t/s, tg64 11.4 t/s
 - No prebuilt AI Hub NPU LLM bundle exists for 8 Gen 3; GenieX qairt runtime is not validated on this chip
+
+## Whisper (speech-to-text) notes
+- Sample app: qualcomm/qidk Solutions/NLPSolution3-AutomaticSpeechRecognition-Whisper (Whisper-Tiny: encoder DLC on NPU via SNPE, decoder .tflite on CPU)
+- Notebook quantizes for sm8850 (v81): CHANGE to sm8650 (v75) for our QIDK; device-side libs must be hexagon-v75, not v81
+- usefulsensors/openai-whisper models/*.tflite are git-lfs pointers (133 bytes): install git-lfs and run `git lfs pull --include="models/whisper-decoder-tiny.tflite"` (real file is ~49 MB)
+- whisper.patch applies cleanly to current openai/whisper master (disables SDPA)
+- Conversion runs inside the qairt docker image (Tools/qairt_docker, Ubuntu 22.04, QAIRT 2.47.0.260601), not in the notebook's pip environment
