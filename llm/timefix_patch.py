@@ -1,9 +1,14 @@
-import os, sys
+import os, re, sys
 sys.path.insert(0, os.path.expanduser(os.environ.get("EXTRACTOR_DIR", "~/mega-extractor")))
 import incident_extractor.postprocess as pp
 import timefix
 
 _orig = pp.resolve_datetime
+_orig_loc = pp.normalize_location
+
+VAGUE_LOC = {"somewhere", "unknown", "not specified", "unspecified", "not mentioned", "unclear", "not sure",
+             "unsure", "na", "n a", "none", "somewhere in the building", "somewhere here"}
+
 
 def _patched(raw, now=None):
     if isinstance(now, str):
@@ -16,5 +21,13 @@ def _patched(raw, now=None):
             return r
     return _orig(raw, now)
 
+
+def _loc(loc):
+    if loc and re.sub(r"[^a-z ]", " ", loc.lower()).strip() in VAGUE_LOC:
+        return None
+    return _orig_loc(loc)
+
+
 pp.resolve_datetime = _patched
-print("[timefix_patch] resolver patched")
+pp.normalize_location = _loc
+print("[timefix_patch] resolver + vague-location patch applied")

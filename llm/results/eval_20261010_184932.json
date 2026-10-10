@@ -1,0 +1,270 @@
+{
+  "mean_latency": 8.167818891067387,
+  "field_accuracy": {
+    "incident_type": 0.7666666666666667,
+    "severity": 0.75,
+    "location": 0.7037037037037037,
+    "datetime_iso": 0.8333333333333334,
+    "persons_involved": 1.0,
+    "equipment": 0.8571428571428571,
+    "description": 0.0,
+    "actions_taken": 0.6470588235294118,
+    "witnesses": 0.75,
+    "follow_up_action": 0
+  },
+  "details": [
+    {
+      "id": "tc_001",
+      "failures": {}
+    },
+    {
+      "id": "tc_002",
+      "failures": {
+        "actions_taken": {
+          "expected": "Evacuation to assembly point",
+          "got": "Everyone evacuated to the assembly point."
+        }
+      }
+    },
+    {
+      "id": "tc_003",
+      "failures": {
+        "incident_type": {
+          "expected": "Equipment Failure",
+          "got": "Electrical"
+        }
+      }
+    },
+    {
+      "id": "tc_004",
+      "failures": {
+        "incident_type": {
+          "expected": "Other",
+          "got": "Spill"
+        }
+      }
+    },
+    {
+      "id": "tc_005",
+      "failures": {}
+    },
+    {
+      "id": "tc_006",
+      "failures": {
+        "description": {
+          "expected": "Acetone container knocked over causing a spill in the lab.",
+          "got": "Someone knocked over a container of acetone, causing it to spread across the floor."
+        }
+      }
+    },
+    {
+      "id": "tc_007",
+      "failures": {
+        "incident_type": {
+          "expected": "Equipment Failure",
+          "got": "Slip/Trip/Fall"
+        }
+      }
+    },
+    {
+      "id": "tc_008",
+      "failures": {
+        "actions_taken": {
+          "expected": "Called security and escorted unauthorized person out",
+          "got": "Security called, person escorted out."
+        }
+      }
+    },
+    {
+      "id": "tc_009",
+      "failures": {
+        "location": {
+          "expected": "main building",
+          "got": "Main Building Near The Stairwell"
+        }
+      }
+    },
+    {
+      "id": "tc_010",
+      "failures": {}
+    },
+    {
+      "id": "tc_011",
+      "failures": {
+        "actions_taken": {
+          "expected": "Reported to maintenance",
+          "got": "Incident reported, maintenance on their way."
+        }
+      }
+    },
+    {
+      "id": "tc_012",
+      "failures": {
+        "location": {
+          "expected": "warehouse entrance",
+          "got": "Near The Entrance To The Warehouse"
+        },
+        "severity": {
+          "expected": "Low",
+          "got": "Medium"
+        }
+      }
+    },
+    {
+      "id": "tc_013",
+      "failures": {}
+    },
+    {
+      "id": "tc_014",
+      "failures": {
+        "actions_taken": {
+          "expected": "HSE team cordoned off area",
+          "got": "Area cordoned off by HSE team."
+        }
+      }
+    },
+    {
+      "id": "tc_015",
+      "failures": {}
+    },
+    {
+      "id": "tc_016",
+      "failures": {
+        "incident_type": {
+          "expected": "Equipment Failure",
+          "got": "Slip/Trip/Fall"
+        },
+        "location": {
+          "expected": "bay 3",
+          "got": "Machine 7 In Bay 3"
+        },
+        "witnesses": {
+          "expected": [
+            "tom",
+            "sarah from QC"
+          ],
+          "got": [
+            "tom",
+            "sarah"
+          ]
+        },
+        "equipment": {
+          "expected": "machine 7",
+          "got": "hydraulic line"
+        }
+      }
+    },
+    {
+      "id": "tc_017",
+      "failures": {
+        "incident_type": {
+          "expected": "Equipment Failure",
+          "got": "Slip/Trip/Fall"
+        }
+      }
+    },
+    {
+      "id": "tc_018",
+      "failures": {
+        "location": {
+          "expected": "substation 2",
+          "got": "Switchgear Panel In Substation 2"
+        }
+      }
+    },
+    {
+      "id": "tc_019",
+      "failures": {
+        "datetime_iso": {
+          "expected": "2026-10-11T08:30:00",
+          "got": "2026-10-11T12:00:00"
+        }
+      }
+    },
+    {
+      "id": "tc_020",
+      "failures": {}
+    },
+    {
+      "id": "tc_021",
+      "failures": {
+        "location": {
+          "expected": "hazmat bay",
+          "got": "Hazmat Bay, Chemical Storage Tank Number 2"
+        }
+      }
+    },
+    {
+      "id": "tc_022",
+      "failures": {
+        "incident_type": {
+          "expected": "Injury",
+          "got": "Slip/Trip/Fall"
+        },
+        "location": {
+          "expected": "level 4 construction area",
+          "got": "Construction Area On Level 4"
+        },
+        "actions_taken": {
+          "expected": "Ambulance called",
+          "got": "Ambulance called, worker transported to hospital."
+        }
+      }
+    },
+    {
+      "id": "tc_023",
+      "failures": {}
+    },
+    {
+      "id": "tc_024",
+      "failures": {
+        "location": {
+          "expected": "loading bay",
+          "got": "Near The Loading Bay"
+        }
+      }
+    },
+    {
+      "id": "tc_025",
+      "failures": {}
+    },
+    {
+      "id": "tc_026",
+      "failures": {}
+    },
+    {
+      "id": "tc_027",
+      "failures": {}
+    },
+    {
+      "id": "tc_028",
+      "failures": {}
+    },
+    {
+      "id": "tc_029",
+      "failures": {
+        "incident_type": {
+          "expected": "Electrical",
+          "got": "Equipment Failure"
+        },
+        "location": {
+          "expected": "cafeteria second floor",
+          "got": "Near The Cafeteria On The Second Floor"
+        },
+        "actions_taken": {
+          "expected": "Facilities notified",
+          "got": "Facilities has been notified."
+        }
+      }
+    },
+    {
+      "id": "tc_030",
+      "failures": {
+        "datetime_iso": {
+          "expected": "2026-10-11T08:50:00",
+          "got": "2026-10-11T20:50:00"
+        }
+      }
+    }
+  ]
+}
