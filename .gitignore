@@ -1,0 +1,11 @@
+models/
+*.gguf
+*.dlc
+*.zip
+pkg-adb/
+build*/
+*.so
+.qai_hub/
+*.ini
+.env
+__pycache__/
