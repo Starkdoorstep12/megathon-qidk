@@ -41,7 +41,9 @@ export function encodeWav16(samples: Float32Array, sampleRate = TARGET_SR): Uint
 }
 
 export function cleanTranscript(t: string): string {
-  return t.replace(/\[[^\]]*\]/g, " ").replace(/\s+/g, " ").trim();
+  const s = t.replace(/\[[^\]]*\]/g, " ").replace(/\s+/g, " ").trim();
+  // Whisper sometimes outputs the whole utterance twice; keep one copy.
+  return s.replace(/^(.{15,}?)(?:\s+\1)+$/i, "$1");
 }
 
 export async function transcribe(samples16k: Float32Array, url = STT_URL): Promise<string> {
