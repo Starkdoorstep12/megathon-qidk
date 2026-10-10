@@ -9,3 +9,11 @@ build*/
 *.ini
 .env
 __pycache__/
+*.apk
+*.bin
+*.dlc
+*.tflite
+*.wav
+__pycache__/
+*.pyc
+offline_cpp_results.json
